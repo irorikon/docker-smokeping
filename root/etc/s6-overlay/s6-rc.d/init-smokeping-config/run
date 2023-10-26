@@ -6,7 +6,8 @@ mkdir -p \
     /config/site-confs \
     /run/apache2 \
     /var/cache/smokeping \
-    /data
+    /data \
+    /var/smokeping
 
 # copy config files
 

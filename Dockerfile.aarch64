@@ -9,6 +9,9 @@ ARG SMOKEPING_VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="ironicbadger,sparklyballs"
 
+ENV MASTER_URL=
+ENV SLAVE_SECRET=
+
 RUN \
   echo "**** install packages ****" && \
   if [ -z ${SMOKEPING_VERSION+x} ]; then \
@@ -52,6 +55,6 @@ RUN \
 COPY root/ /
 
 # ports and volumes
-EXPOSE 80
+EXPOSE 5123
 
 VOLUME /config /data
